@@ -30,6 +30,7 @@ Then connect to http://localhost:5000/ and it will start the simulation.
 ## Part 2 : NILM Data Science
 1) I started to look at the data
 `python3 datavisualization.py`
+
 I created graphics to have effective current in function of time for pc1, pc2, sensor and main data (checkout part2_keras/images/)
 Then i thought about my data structure and models but i wasn't enough confident on my idea and chose to do some internet searches.
 2) Then i started again to search similar project on github looking for "state of the art" projects.
@@ -39,18 +40,25 @@ I found https://github.com/Vibhuti-B/NILM which also helped me to understand dat
 To compute data and store them in data/ so we don't need to compute it each time we train.
 4) (part2_keras/) I then chose my intelligent framework. I started with deep learning using keras even if there isn't a lot of data. I used keras to simply implement my models.
 I created two models for PCs : very simple push forward neural networks with onehot encoding output to have classification problem. Almost the same thing for temperature sensor but i had to modify the network model because this is a binary classification on the contrary of PCs network which is categories classification.
+
 #### Accuracy
 `pc1_model accuracy 75,6%`
+
 `pc2_model accuracy 76,2%`
+
 `sensor_model accuracy 64,8%`
 
 I was not very satisfied by accuracy of my models that's why i chose to implement machine learning too.
 5) (part2_sklearn/) So, based on keras works i implemented intelligent algorithms using scikit learn.
 Based on Vibhuti-B works. I tried lot of different algorithms and found similar algorithms for my 3 models.
+
 #### Accuracy
 `pc1_model accuracy 87.8%`
+
 `pc2_model accuracy 76.2%`
+
 `sensor_model accuracy 75,9%`
+
 Accuracy looks pretty similar so the lack of accuracy may be due to the lack of data.
 
 For future uses, i would choose the deep learning option because accuracy will increase with numbers of accumulated data. Machine Learning algorithms will not improve with more data.
@@ -59,12 +67,25 @@ For future uses, i would choose the deep learning option because accuracy will i
 `pip3 install sklearn tensorflow keras matplotlib`
 ### Run
 Simply go in part2_keras/ or part2_sklearn/
-To precompute data : (uploaded models are already computed)
+
+#### Precompute data
+(uploaded models are already computed)
+
+
 `python3 pretrain.py`
-To train : (uploaded models are already trained)
+
+#### Train
+(uploaded models are already trained)
+
+
 `python3 train.py`
-To test :
+
+#### test
+
+
 `python3 test.py`
+
+
 Tests will output a csv file "outut.csv" in the current folder with predictions.
 
 ### References
