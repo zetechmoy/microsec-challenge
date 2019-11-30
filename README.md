@@ -1,13 +1,13 @@
 # MicroSec Machine Learning Challenge Internship
 
 ## Planning
-Wait for 00h to receive the question mail
-00h15   -   00h30   : Start to read questions so i can think about it during the night
-8h15    -   10h30   : part1 understand check,
-10h30   -   11h     : part1 redaction (schema)
-11h00   -   13h00   : part2 understand check, problem/data, compute data to prepare training
-14h30   -   17h30   : part2 creating models using keras (deep learning) and using scikit learn (machine learning)
-17h30   -   18h30   : Write reports
+* Wait for 00h to receive the question mail
+* 00h15   -   00h30   : Start to read questions so i can think about it during the night
+* 8h15    -   10h30   : part1 understand check
+* 10h30   -   11h     : part1 redaction (schema)
+* 11h00   -   13h00   : part2 understand check, problem/data, compute data to prepare training
+* 14h30   -   17h30   : part2 creating models using keras (deep learning) and using scikit learn (machine learning)
+* 17h30   -   18h30   : Write reports
 
 ## Part 1 : Django/Flask Programming
 1) I did'nt know anything about Celery or Websockets so i started to learn how it works
