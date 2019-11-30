@@ -11,12 +11,16 @@ Wait for 00h to receive the question mail
 
 ## Part 1 : Django/Flask Programming
 1) I did'nt know anything about Celery or Websockets so i started to learn how it works
+
 2) Then i tried to find similar projects on github
 I found a python chat app using websocket : https://github.com/rakibtg/Python-Chat-App
 I learnt how it works then get think about my data structure => Using Database/Sensors simulation
+
 3) Then i created my simulation with "Fake SQL Database" and "Fake Sensors" because i did'nt have enough time to create/implement a full sql database for this daily project (i know how works a SQL database...)
+
 4) Then i implemented my dashboard based on python chat app using flask
 The picture structure.png in part1/ show the structure of the app
+
 Some python3 modules needs to be installed :
 ### Installation
 `pip3 install flask flask-socketio eventlet`
@@ -33,11 +37,14 @@ Then connect to http://localhost:5000/ and it will start the simulation.
 
 I created graphics to have effective current in function of time for pc1, pc2, sensor and main data (checkout part2_keras/images/)
 Then i thought about my data structure and models but i wasn't enough confident on my idea and chose to do some internet searches.
+
 2) Then i started again to search similar project on github looking for "state of the art" projects.
 I found https://github.com/Vibhuti-B/NILM which also helped me to understand data.
+
 3) I was more confident on my initial idea and i started to implement my first idea. It seems like my main idea was almost the same as the github implementation that's why you will find some similarities.
 `python3 pretrain.py`
 To compute data and store them in data/ so we don't need to compute it each time we train.
+
 4) (part2_keras/) I then chose my intelligent framework. I started with deep learning using keras even if there isn't a lot of data. I used keras to simply implement my models.
 I created two models for PCs : very simple push forward neural networks with onehot encoding output to have classification problem. Almost the same thing for temperature sensor but i had to modify the network model because this is a binary classification on the contrary of PCs network which is categories classification.
 
@@ -80,7 +87,7 @@ Simply go in part2_keras/ or part2_sklearn/
 
 `python3 train.py`
 
-#### test
+#### Test
 
 
 `python3 test.py`
