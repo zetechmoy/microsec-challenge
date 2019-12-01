@@ -14,25 +14,29 @@
 
 2) Then i tried to find similar projects on github
 I found a python chat app using websocket : https://github.com/rakibtg/Python-Chat-App
-I learnt how it works then get think about my data structure => Using Database/Sensors simulation
+I learnt how it works then think about my data structure => Using Database/Sensors simulation
 
 3) Then i created my simulation with "Fake SQL Database" and "Fake Sensors" because i did'nt have enough time to create/implement a full sql database for this daily project (i know how works a SQL database...)
 
 4) Then i implemented my dashboard based on python chat app using flask
+
 The picture structure.png in part1/ show the structure of the app
 
 Some python3 modules needs to be installed :
 ### Installation
 `pip3 install flask flask-socketio eventlet`
+
 ### Run
 Simply go in part1/
+
 `python3 app.py`
 
 Then connect to http://localhost:5000/ and it will start the simulation.
 "Fake" sensors will send data to api and update client website automatically as shown on the structure.png
 
 ## Part 2 : NILM Data Science
-1) I started to look at the data
+1) I started to look at the data, check for this script :
+
 `python3 datavisualization.py`
 
 I created graphics to have effective current in function of time for pc1, pc2, sensor and main data (checkout part2_keras/images/)
@@ -42,11 +46,13 @@ Then i thought about my data structure and models but i wasn't enough confident 
 I found https://github.com/Vibhuti-B/NILM which also helped me to understand data.
 
 3) I was more confident on my initial idea and i started to implement my first idea. It seems like my main idea was almost the same as the github implementation that's why you will find some similarities.
+
 `python3 pretrain.py`
+
 To compute data and store them in data/ so we don't need to compute it each time we train.
 
 4) **(part2_keras/)** I then chose my intelligent framework. I started with deep learning using keras even if there isn't a lot of data. I used keras to simply implement my models.
-I created two models for PCs : very simple push forward neural networks with onehot encoding output to have classification problem. Almost the same thing for temperature sensor but i had to modify the network model because this is a binary classification on the contrary of PCs network which is categories classification.
+I created two models for PCs : very simple push forward neural networks with onehot encoding output to have classification problem. Almost the same thing for temperature sensor but i had to modify the network model because this is a binary classification on the contrary of PCs network which is categories classification. It's not sequences predictions so i did'nt use LSTM-Like layers and it's not Image/Text predictions that's why i didn't use Convolutional Networks.
 
 #### Accuracy
 `pc1_model accuracy 75,6%`
@@ -67,9 +73,9 @@ Based on Vibhuti-B works. I tried lot of different algorithms and found similar 
 
 `sensor_model accuracy 75,9%`
 
-Accuracy looks pretty similar so the lack of accuracy may be due to the lack of data.
+Accuracy looks pretty similar to the deep learning implementation so the lack of accuracy may be due to the lack of data.
 
-For future uses, i would choose the deep learning option because accuracy will increase with numbers of accumulated data. Machine Learning algorithms will not improve with more data.
+For future uses, i would choose the deep learning implementation because accuracy will increase with numbers of accumulated data. Machine Learning algorithms accuracy will not improve with more data.
 
 ### Installation
 `pip3 install sklearn tensorflow keras matplotlib`
@@ -94,7 +100,7 @@ Uploaded models are already trained
 `python3 test.py`
 
 
-Tests will output a csv file "outut.csv" in the current folder with predictions.
+Tests will output a csv file "output.csv" in the current folder with predictions.
 
 ### References
 * https://github.com/rakibtg/Python-Chat-App
